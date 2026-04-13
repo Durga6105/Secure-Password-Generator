@@ -60,11 +60,7 @@ git clone https://github.com/your-username/password-generator.git
 
 * Open `index.html` in your browser
 
----
 
-## 📸 Preview
-
-*(Add a screenshot here after uploading your project to GitHub)*
 
 ---
 
