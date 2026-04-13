@@ -1,0 +1,169 @@
+/* General styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #ff6b6b, #6b6bff, #6bff95, #ffd36b);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  width: 400px;
+  backdrop-filter: blur(10px);
+  color: #fff;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Password display */
+.password-box {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.password-box input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.password-box button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #222;
+  color: #fff;
+}
+
+/* Strength meter */
+.strength-meter {
+  height: 8px;
+  width: 100%;
+  background: #444;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#strength-bar {
+  height: 100%;
+  width: 0%;
+  border-radius: 5px;
+  background: red;
+  transition: width 0.3s;
+}
+
+#strength-text {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Toggle switches */
+.switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  width: 40px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+  background: #00d084;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+/* Buttons */
+.generate-btn {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #00d084;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.generate-btn:hover {
+  background: #00b870;
+}
+
+#themeToggle {
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Toast */
+#toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00d084;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: none;
+}
+
+/* Dark theme */
+body.dark {
+  background: #222;
+}
+
+body.dark .container {
+  background: rgba(255,255,255,0.08);
+}

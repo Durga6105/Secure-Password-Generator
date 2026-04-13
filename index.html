@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔑 Password Generator</h1>
+
+    <!-- Password Display -->
+    <div class="password-box">
+      <input type="password" id="PasswordBox" readonly />
+      <button id="toggleVisibility">👁️</button>
+      <button onclick="copyPassword()">📋 Copy</button>
+    </div>
+    <p id="strength-text">Strength: </p>
+    <div class="strength-meter">
+      <div id="strength-bar"></div>
+    </div>
+
+    <!-- Settings -->
+    <div class="settings">
+      <label>
+        Length: 
+        <input type="number" id="Passwordlength" min="8" max="20" value="12" />
+      </label>
+      <label class="switch">Uppercase
+        <input type="checkbox" id="Uppercase" checked />
+        <span class="slider"></span>
+      </label>
+      <label class="switch">Lowercase
+        <input type="checkbox" id="Lowercase" checked />
+        <span class="slider"></span>
+      </label>
+      <label class="switch">Numbers
+        <input type="checkbox" id="Numbers" checked />
+        <span class="slider"></span>
+      </label>
+      <label class="switch">Symbols
+        <input type="checkbox" id="Symbols" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <button onclick="createPassword()" class="generate-btn">Generate Password</button>
+
+    <!-- Theme Switch -->
+    <button id="themeToggle">🌙 Toggle Theme</button>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast"></div>
+
+  <script src="script2.js"></script>
+</body>
+</html>
